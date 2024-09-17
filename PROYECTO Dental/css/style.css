@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Inicia CSS para barra de navegación*/
+header {
+    background-color: rgb(53, 67, 145);
+}
+
+.logo {
+    display: inline-block;
+    width: 45%;
+}
+
+.logo img {
+    width: 120px;
+    margin: 20px;
+}
+
+.nav {
+    display: inline-block;
+    width: 55%;
+    text-align: right;
+    position: absolute;
+    top: 3.5rem;
+
+}
+
+.nav ul {
+    margin-right: 50px;
+
+}
+
+.nav li {
+    display: inline-block;
+    background-color: #000000;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+li a {
+    color: #f6f6f7;
+}
+
+/* Termina CSS para barra de navegación*/
+
+
+
+/* Inicia imagen Slogan*/
+
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 530px;
+    background-image: url('Captura.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-main .home-title {
+    display: grid;
+    grid-column: 2;
+    justify-items: center;
+    height: 350px;
+    margin: 80px;
+}
+
+.home-main-text {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #38bcdd;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.home-main-button {
+    width: 110px;
+    height: 50px;
+    background-color: rgb(53, 67, 145);
+    font-weight: 500;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+}
+
+.home-main-button a {
+    color: #fff;
+}
+
+.home-main .home-title:hover button {
+    transform: scale(1.2);
+
+}
+
+/* Termina imagen Slogann*/
+
+
+/* Inicia grid servicios*/
+
+.home-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    gap: 30px;
+}
+
+.home-main .home-about {
+    display: grid;
+    grid-column: 1;
+    justify-items: center;
+    height: auto;
+
+}
+
+.home-about {
+    text-align: justify;
+    padding: 30px;
+    overflow: hidden;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+
+
+.home-about img {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 30px;
+
+}
+
+.home-about:hover img {
+    transform: scale(1.2);
+}
+
+.home-main .home-about img,
+h3,
+p,
+a {
+    padding: 10px;
+}
+
+
+.home-services-button {
+    margin: 30px;
+    width: 110px;
+    height: 50px;
+    background-color: rgb(53, 67, 145);
+    font-weight: 500;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+}
+
+.boton-servicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-services-button a{
+    color: #fff;
+}
+
+/* Termina grid servicios*/
+
+/*CSS BLOG*/
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.centrar-texto {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.entrada-blog-division {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+
+}
+
+.texto-entrada {
+    margin-left: 30px;
+}
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-entrada a {
+    text-decoration: none;
+    color: black;
+}
+
+.texto-entrada h4::after {
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.texto-entrada span {
+    color: #E08709;
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    /*Este aplica también para el blog*/
+}
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+.contenido-centrado {
+    max-width: 1200px;
+}
+/*Termina CSS BLOG*/
+/*Inicia CSS NOSOTROS*/
+
+
+.contenedor img {
+    max-width: 100%;
+}
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+
+.texto-nosotros h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    padding: 2rem 0 1rem 0;
+    text-align: left;
+}
+
+/*Termina CSS NOSOTROS*/
+
+/* Inicia CSS para pie de página*/
+footer .footer-icons-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: rgb(15, 15, 15);
+    justify-content: center;
+}
+
+footer .footer-icons-container .icons {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-items: flex-end;
+    align-content: center;
+    justify-content: space-between;
+    justify-self: end;
+    margin-right: 50px;
+    flex-wrap: wrap;
+}
+
+footer .icons span {
+    color: #00A7E1;
+}
+
+/* Termina CSS para pie de página*/
