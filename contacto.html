@@ -10,77 +10,78 @@
     <link rel="stylesheet" href="css/font/flaticon.css">
     <link rel="stylesheet" href="css/icon/icofont.min.css">
     <title>Consultorio Dental - Contacto</title>
+    <script type="module" src="js/main.js"></script>
 </head>
 
-<body>
-    <main>
+<body data-page="contacto">
+    <header id="site-header"></header>
 
-        <!----- Inicia barra de navegación ---------->
-        <header>
-            <section class="logo">
-                <img src="img/logo1.2.jpg" alt="">
-            </section>
-
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!----- Termina barra de navegación ---------->
+    <main class="contenedor">
+        <h1 class="fw-400 centrar-texto">Contacto</h1>
 
         <div class="form-container">
-            <form>
+            <form id="contact-form" class="contact-form" novalidate>
                 <h2>Formulario de contacto</h2>
-                <br>
-                <p>Por favor, completa los siguientes campos para ponerte en contacto con nosotros:</p>
-                <br>
+                <p class="contact-intro">Por favor, completa los siguientes campos para ponerte en contacto con nosotros:</p>
 
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <div id="preselected-service-note" class="preselected-service-note" role="status"></div>
 
-                <label for="apellido-paterno">Apellido Paterno:</label>
-                <input type="text" id="apellido-paterno" name="apellido-paterno" required>
+                <div class="form-field">
+                    <label for="servicio">Servicio de interés:</label>
+                    <select id="servicio" name="servicio">
+                        <option value="consulta-general">Consulta general</option>
+                    </select>
+                    <span id="error-servicio" class="field-error" aria-live="polite"></span>
+                </div>
 
-                <label for="apellido-materno">Apellido Materno:</label>
-                <input type="text" id="apellido-materno" name="apellido-materno" required>
+                <div class="form-field">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    <span id="error-nombre" class="field-error" aria-live="polite"></span>
+                </div>
 
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="apellido-paterno">Apellido Paterno:</label>
+                        <input type="text" id="apellido-paterno" name="apellido-paterno" placeholder="Apellido paterno" required>
+                        <span id="error-apellido-paterno" class="field-error" aria-live="polite"></span>
+                    </div>
 
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                    <div class="form-field">
+                        <label for="apellido-materno">Apellido Materno:</label>
+                        <input type="text" id="apellido-materno" name="apellido-materno" placeholder="Apellido materno" required>
+                        <span id="error-apellido-materno" class="field-error" aria-live="polite"></span>
+                    </div>
+                </div>
 
-                <label for="comentario">Comentario:</label>
-                <textarea id="comentario" name="comentario"></textarea>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                        <span id="error-correo" class="field-error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos" required>
+                        <span id="error-telefono" class="field-error" aria-live="polite"></span>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                    <span id="error-comentario" class="field-error" aria-live="polite"></span>
+                </div>
+
+                <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
 
                 <button type="submit" class="boton">Enviar</button>
             </form>
         </div>
-
-
     </main>
 
-    <!----- Inicia pie de página ---------->
-    <footer>
-        <section class="footer-icons-container">
-            <div class="icons">
-                <a href="https://www.facebook.com" target="_blank">
-                    <span class="flaticon-001-facebook"></span>
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <span class="flaticon-002-twitter"></span>
-                </a>
-                <a href="https://www.instagram.com" target="_blank">
-                    <span class="flaticon-011-instagram"></span>
-                </a>
-        </section>
-    </footer>
-    <!----- Termina pie de página ---------->
+    <footer id="site-footer"></footer>
 </body>
 
 </html>
